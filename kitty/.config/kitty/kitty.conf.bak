@@ -1,0 +1,7 @@
+# BEGIN_KITTY_THEME
+# Noctalia
+include current-theme.conf
+# END_KITTY_THEME
+
+font_family "Sergamon-Regular"
+#font_size 12.0
