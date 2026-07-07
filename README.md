@@ -15,6 +15,10 @@ capslock = overload(control, esc)
 
 # Remaps the escape key to capslock
 esc = capslock
+
+# Swap Super and ALT
+leftmeta = leftalt
+leftalt = leftmeta
 ```
 
 Run `sudo keyd reload` to reload the config set.

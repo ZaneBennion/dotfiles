@@ -6,24 +6,31 @@ local launchPrefix = "uwsm app -- " -- if you are not using UWSM, make this empt
 ---- WINDOW MANAGEMENT ----
 ---------------------------
 
-hl.bind(mainMod .. " + Escape",      hl.dsp.exec_cmd("hyprctl kill"))
-hl.bind(mainMod .. " + Q",           hl.dsp.window.close())
-hl.bind(mainMod .. " + ALT + Space", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + D",           hl.dsp.window.fullscreen({ mode = 1 }))
-hl.bind(mainMod .. " + F",           hl.dsp.window.fullscreen())
-hl.bind(mainMod .. " + ALT + C",     hl.dsp.exec_cmd(noctCall .. " sessionMenu toggle"))
+hl.bind(mainMod .. " + Escape",        hl.dsp.exec_cmd("hyprctl kill"))
+hl.bind(mainMod .. " + Q",             hl.dsp.window.close())
+hl.bind(mainMod .. " + ALT + Space",   hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + D",             hl.dsp.window.fullscreen({ mode = 1 }))
+hl.bind(mainMod .. " + F",             hl.dsp.window.fullscreen())
+hl.bind(mainMod .. "+ SHIFT + Space",  hl.dsp.window.float())
+hl.bind(mainMod .. " + ALT + C",       hl.dsp.exec_cmd(noctCall .. " sessionMenu toggle"))
 
 -- Change focus
 hl.bind(mainMod .. " + h",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + j",  hl.dsp.focus({ direction = "down" }))
-hl.bind(mainMod .. " + k",    hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + k",  hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + l",  hl.dsp.focus({ direction = "right" }))
 
 -- Move active window around current workspace
 hl.bind(mainMod .. " + SHIFT + h",  hl.dsp.window.move({ direction = "l" }))
 hl.bind(mainMod .. " + SHIFT + j",  hl.dsp.window.move({ direction = "d" }))
 hl.bind(mainMod .. " + SHIFT + k",    hl.dsp.window.move({ direction = "u" }))
 hl.bind(mainMod .. " + SHIFT + l", hl.dsp.window.move({ direction = "r" }))
+
+-- Resize active window
+hl.bind(mainMod .. " + CONTROL + h",  hl.dsp.window.resize({x = -100, y = 0,    relative = true}))
+hl.bind(mainMod .. " + CONTROL + j",  hl.dsp.window.resize({x = 0,    y = 100,  relative = true}))
+hl.bind(mainMod .. " + CONTROL + k",  hl.dsp.window.resize({x = 0,    y = -100, relative = true}))
+hl.bind(mainMod .. " + CONTROL + l",  hl.dsp.window.resize({x = 100,  y = 0,    relative = true}))
 
 -- Move & Resize with mouse
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
