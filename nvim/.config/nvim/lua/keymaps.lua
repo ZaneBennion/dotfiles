@@ -28,11 +28,29 @@ vim.keymap.set("n", "<leader>u", function()
     require("undotree").open()
 end, { desc = "Toggle Builtin Undotree" })
 
---- Buffer Navigation ---
-
 -- Cycle to previous/next buffer using Shift-H and Shift-L
 vim.keymap.set("n", "<S-h>", "<cmd>bprev<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Next buffer" })
 
 -- Close current buffer using Leader + c
 vim.keymap.set("n", "<leader>c", "<cmd>bdelete<CR>", { desc = "Close current buffer" })
+
+-- MiniPick
+vim.keymap.set("n", "<leader>f", function() MiniPick.builtin.files() end, { desc = "Mini File Picker" })
+vim.keymap.set("n", "<leader>g", function() MiniPick.builtin.grep({ pattern = vim.fn.expand("<cword>") }) end, { desc = "Grep word/Search word" })
+vim.keymap.set("n", "<leader>h", function() MiniPick.builtin.help() end, { desc = "Mini Help" })
+
+vim.keymap.set("n", "<leader>x", function() MiniExtra.pickers.diagnostic() end, { desc = "Mini Picker Diagnostics" })
+vim.keymap.set("n", "<leader>k", function() MiniExtra.pickers.keymaps() end, { desc = 'Search keymaps' })
+
+-- Navigate completion menu with Alt+j and Alt+k
+vim.keymap.set('i', '<M-j>', function()
+    return vim.fn.pumvisible() == 1 and '<C-n>' or '<M-j>'
+end, { expr = true, desc = "Next completion item" })
+
+vim.keymap.set('i', '<M-k>', function()
+    return vim.fn.pumvisible() == 1 and '<C-p>' or '<M-k>'
+end, { expr = true, desc = "Previous completion item" })
+
+-- Mini Jump
+vim.keymap.set("n", "s", "<Cmd>lua MiniJump2d.start(MiniJump2d.builtin_opts.single_character)<CR>", { desc = 'Jump to specific char' })
