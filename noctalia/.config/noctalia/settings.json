@@ -90,6 +90,16 @@
             ],
             "left": [
                 {
+                    "colorizeDistroLogo": false,
+                    "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
+                    "customIconPath": "/home/zanebennion/dotfiles/icons/.icons/apple-icon.png",
+                    "enableColorization": false,
+                    "icon": "noctalia",
+                    "id": "ControlCenter",
+                    "useDistroLogo": false
+                },
+                {
                     "characterCount": 2,
                     "colorizeIcons": false,
                     "emptyColor": "secondary",
@@ -134,12 +144,6 @@
                 {
                     "displayMode": "onhover",
                     "iconColor": "none",
-                    "id": "Network",
-                    "textColor": "none"
-                },
-                {
-                    "displayMode": "onhover",
-                    "iconColor": "none",
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
                     "textColor": "none"
@@ -154,14 +158,10 @@
                     "showPowerProfiles": false
                 },
                 {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": true,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": true
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Network",
+                    "textColor": "none"
                 }
             ]
         }
