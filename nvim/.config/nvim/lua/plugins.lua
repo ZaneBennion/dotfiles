@@ -73,4 +73,8 @@ require('mini.tabline').setup({
 })
 
 --- mini jump2d ---
-require("mini.jump2d").setup()
+require("mini.jump2d").setup({
+    mappings = {
+        start_jumping = '',
+    },
+})
