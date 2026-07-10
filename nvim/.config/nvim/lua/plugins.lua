@@ -5,12 +5,14 @@ vim.pack.add({
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/mason-org/mason.nvim",
     "https://github.com/abecodes/tabout.nvim",
+    "https://github.com/windwp/nvim-ts-autotag",
 })
 
 require("tabout").setup()
 require('mini.pairs').setup()
 require("mini.surround").setup()
 require("mini.extra").setup()
+require("nvim-ts-autotag").setup()
 
 -- mini files ----
 local MiniFiles = require("mini.files")
