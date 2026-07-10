@@ -7,6 +7,7 @@ SYSTEM_DIR="$DOTFILES_DIR/system"
 FILES_TO_SYNC=(
     "/etc/sddm.conf"
     "/usr/share/sddm/themes/reactionary"
+    "/etc/keyd/default.conf"
 )
 
 echo "Pulling specific system files back into the repository..."
