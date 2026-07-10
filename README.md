@@ -17,8 +17,8 @@ capslock = overload(control, esc)
 esc = capslock
 
 # Swap Super and ALT
-leftmeta = leftalt
-leftalt = leftmeta
+# leftalt = leftmeta
+# leftmeta = leftalt
 ```
 
 Run `sudo keyd reload` to reload the config set.
