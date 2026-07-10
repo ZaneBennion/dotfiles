@@ -1,29 +1,38 @@
 require("mason").setup()
+local langs = require("languages")
 
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
-
-vim.diagnostic.config({ virtual_text = true })
-
+-- Capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = vim.tbl_deep_extend("force", capabilities, require("mini.completion").get_lsp_capabilities())
-
 vim.lsp.config("*", { capabilities = capabilities })
 
-vim.lsp.config("lua_ls", {
-    settings = {
-        Lua = {
-            diagnostics = { globals = { "vim" } },
-        },
-    },
-})
+-- Dynamically build LSP lists
+local lsp_enable_list = {}
+local mason_install_list = {}
 
-vim.lsp.enable({
-    "lua_ls",
-    "marksman",
-    "gopls",
-    "rust_analyzer",
-    "typescript-language-server",
-    "html-lsp",
-    "tailwindcss-language-server",
-})
+for _, config in pairs(langs) do
+    if config.lsp then
+        table.insert(lsp_enable_list, config.lsp)
+        -- Apply specific settings if defined in languages.lua
+        if config.settings then
+            vim.lsp.config(config.lsp, { settings = config.settings })
+        end
+    end
+    if config.mason then
+        table.insert(mason_install_list, config.mason)
+    end
+end
+
+-- Auto-Download missing LSPs via Mason Registry API
+local registry = require("mason-registry")
+registry.refresh(function()
+    for _, pkg_name in ipairs(mason_install_list) do
+        local ok, pkg = pcall(registry.get_package, pkg_name)
+        if ok and not pkg:is_installed() then
+            pkg:install()
+        end
+    end
+end)
+
+-- Enable all mapped LSPs
+vim.lsp.enable(lsp_enable_list)

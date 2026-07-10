@@ -54,3 +54,8 @@ end, { expr = true, desc = "Previous completion item" })
 
 -- Mini Jump
 vim.keymap.set("n", "s", "<Cmd>lua MiniJump2d.start(MiniJump2d.builtin_opts.single_character)<CR>", { desc = 'Jump to specific char' })
+
+-- LSP
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+vim.diagnostic.config({ virtual_text = true })

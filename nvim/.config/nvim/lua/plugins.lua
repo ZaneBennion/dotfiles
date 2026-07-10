@@ -59,15 +59,6 @@ require("mini.completion").setup({
     }
 })
 
---- mini snippets ---
-local MiniSnippets = require("mini.snippets")
-MiniSnippets.setup({
-    snippets = {
-        MiniSnippets.gen_loader.from_lang(), -- loads friendly-snippets
-    },
-})
-MiniSnippets.start_lsp_server({ match = false })
-
 --- mini tabline (Bufferline) ---
 require('mini.tabline').setup({
     -- Show a visual indicator of hidden buffers
