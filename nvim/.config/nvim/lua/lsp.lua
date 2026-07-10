@@ -24,4 +24,6 @@ vim.lsp.enable({
     "gopls",
     "rust_analyzer",
     "typescript-language-server",
+    "html-lsp",
+    "tailwindcss-language-server",
 })
