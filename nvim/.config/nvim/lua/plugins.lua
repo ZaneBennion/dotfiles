@@ -20,10 +20,16 @@ MiniFiles.setup({
     mappings = {
         go_in_plus = "l",
         go_out_plus = "h",
+        synchronize = "<Cr>",
     },
 })
 
 vim.keymap.set("n", "<leader><Space>", function()
+    MiniFiles.open(vim.api.nvim_buf_get_name(0), false)
+    MiniFiles.reveal_cwd()
+end, { desc = "Toggle into currently opened file" })
+
+vim.keymap.set("n", "<Cr>", function()
     MiniFiles.open(vim.api.nvim_buf_get_name(0), false)
     MiniFiles.reveal_cwd()
 end, { desc = "Toggle into currently opened file" })
