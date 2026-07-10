@@ -23,4 +23,5 @@ vim.lsp.enable({
     "marksman",
     "gopls",
     "rust_analyzer",
+    "typescript-language-server",
 })
