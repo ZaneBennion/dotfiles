@@ -31,6 +31,11 @@ return {
         lsp = "marksman",
         mason = "marksman"
     },
+    python = {
+        ts = "python",
+        lsp = "pyright",
+        mason = "pyright"
+    },
     -- Languages where you only want Treesitter formatting, no LSP
     bash = { ts = "bash" },
     json = { ts = "json" },
