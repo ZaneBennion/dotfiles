@@ -59,9 +59,9 @@
     "mSurfaceVariant": "#eff0ff",
     "mOnSurfaceVariant": "#4b55c8",
     "mOutline": "#000000",
-    "mShadow": "#9b9b9b",
+    "mShadow": "#000000",
     "mHover": "#9b9b9b",
-    "mOnHover": "#000000",
+    "mOnHover": "#eff0ff",
     "terminal": {
       "normal": {
         "black": "#D8D8D8",

@@ -2,7 +2,7 @@
     "mError": "#fd4663",
     "mHover": "#9b9b9b",
     "mOnError": "#0e0e43",
-    "mOnHover": "#000000",
+    "mOnHover": "#eff0ff",
     "mOnPrimary": "#dadcff",
     "mOnSecondary": "#dadcff",
     "mOnSurface": "#0e0e43",
@@ -11,7 +11,7 @@
     "mOutline": "#000000",
     "mPrimary": "#207874",
     "mSecondary": "#9b9b9b",
-    "mShadow": "#9b9b9b",
+    "mShadow": "#000000",
     "mSurface": "#d8d8d8",
     "mSurfaceVariant": "#eff0ff",
     "mTertiary": "#0e0e43"
