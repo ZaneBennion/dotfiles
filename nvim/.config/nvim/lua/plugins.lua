@@ -71,6 +71,20 @@ require('mini.tabline').setup({
     show_icons = true,
 })
 
+-- Customize the Current Tab (Foreground: Dark, Background: Green, Bold text)
+vim.api.nvim_set_hl(0, 'MiniTablineCurrent', { 
+    fg = '#1e1e2e', 
+    bg = '#9B9EA4', 
+    bold = true 
+})
+
+-- Customize the Current Tab when modified/unsaved (Background: Red)
+vim.api.nvim_set_hl(0, 'MiniTablineModifiedCurrent', { 
+    fg = '#1e1e2e', 
+    bg = '#f38ba8', 
+    bold = true, 
+    italic = true 
+})
 --- mini jump2d ---
 require("mini.jump2d").setup({
     mappings = {
