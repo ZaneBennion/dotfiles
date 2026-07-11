@@ -43,6 +43,7 @@ vim.keymap.set("n", "<leader>h", function() MiniPick.builtin.help() end, { desc 
 vim.keymap.set("n", "<leader>x", function() MiniExtra.pickers.diagnostic() end, { desc = "Mini Picker Diagnostics" })
 vim.keymap.set("n", "<leader>k", function() MiniExtra.pickers.keymaps() end, { desc = 'Search keymaps' })
 
+-- Completion Menu
 -- Navigate completion menu with Ctrl+j and Ctrl+k
 vim.keymap.set('i', '<C-j>', function()
     return vim.fn.pumvisible() == 1 and '<C-n>' or '<C-j>'
