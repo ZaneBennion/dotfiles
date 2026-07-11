@@ -24,5 +24,5 @@ vim.api.nvim_create_autocmd("TextYankPost",{
     end,
 })
 
-vim.opt.completeopt = "menuone,fuzzy,nosort"
+vim.opt.completeopt = "menuone,fuzzy,nosort,noinsert"
 vim.opt.shortmess:append("c")
