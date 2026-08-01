@@ -12,7 +12,7 @@ return {
     },
     typescript = {
         -- Some languages need multiple Treesitter parsers
-        ts = { "typescript", "javascript", "tsx" }, 
+        ts = { "typescript", "javascript", "tsx" },
         lsp = "ts_ls",
         mason = "typescript-language-server"
     },
@@ -27,7 +27,7 @@ return {
         mason = "tailwindcss-language-server"
     },
     markdown = {
-        ts = "markdown",
+        ts = { "markdown", "markdown_inline" },
         lsp = "marksman",
         mason = "marksman"
     },
