@@ -87,3 +87,4 @@ gaps.outer.right =      0
     cmd-alt-ctrl-shift-5 = 'move-node-to-workspace 5'
 
     cmd-alt-ctrl-enter = 'exec-and-forget open -a "Ghostty"'
+    cmd-alt-ctrl-shift-s = 'exec-and-forget screencapture -i -c'
