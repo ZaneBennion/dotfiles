@@ -45,10 +45,10 @@ gaps.outer.right =      0
 
 [workspace-to-monitor-force-assignment]
     1 = 'Built-in'
-    # 2 = ['LG ULTRAWIDE \(1\)', 'LG ULTRAWIDE', 'G34WQC', 'Built-in']
-    # 3 = ['LG ULTRAWIDE \(1\)', 'LG ULTRAWIDE', 'G34WQC', 'Built-in']
-    # 4 = ['LG ULTRAWIDE \(2\)', 'LG ULTRAWIDE', 'G34WQC', 'Built-in']
-    # 5 = ['LG ULTRAWIDE \(2\)', 'LG ULTRAWIDE', 'G34WQC', 'Built-in']
+    2 = ['MSI G271', 'built-in']
+    3 = ['MSI G271', 'built-in']
+    4 = ['MSI G271', 'built-in']
+    5 = ['MSI G271', 'built-in']
 
 [mode.main.binding]
     # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
