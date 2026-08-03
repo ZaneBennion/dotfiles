@@ -44,11 +44,11 @@ gaps.outer.top =        0
 gaps.outer.right =      0
 
 [workspace-to-monitor-force-assignment]
-    1 = 'Built-in'
+    1 = ['MSI G271', 'built-in'] 
     2 = ['MSI G271', 'built-in']
     3 = ['MSI G271', 'built-in']
     4 = ['MSI G271', 'built-in']
-    5 = ['MSI G271', 'built-in']
+    5 = 'Built-in'
 
 [mode.main.binding]
     # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
