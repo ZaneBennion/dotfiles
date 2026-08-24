@@ -36,6 +36,11 @@ return {
         lsp = "pyright",
         mason = "pyright"
     },
+    sql = {
+        ts = "sql",
+        lsp = "sqlls",
+        mason = "sqlls"
+    },
     -- Languages where you only want Treesitter formatting, no LSP
     bash = { ts = "bash" },
     json = { ts = "json" },
