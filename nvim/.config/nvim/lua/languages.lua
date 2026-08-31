@@ -41,6 +41,14 @@ return {
         lsp = "sqlls",
         mason = "sqlls"
     },
+    yaml = {
+        ts = "yaml",
+        lsp = "yamlls",
+        mason = "yaml-language-server"
+    },
+    dart = {
+        ts = "dart",
+    },
     -- Languages where you only want Treesitter formatting, no LSP
     bash = { ts = "bash" },
     json = { ts = "json" },

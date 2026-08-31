@@ -6,6 +6,9 @@ vim.pack.add({
     "https://github.com/mason-org/mason.nvim",
     "https://github.com/abecodes/tabout.nvim",
     "https://github.com/windwp/nvim-ts-autotag",
+    "https://github.com/nvim-lua/plenary.nvim",
+    "https://github.com/stevearc/dressing.nvim",
+    "https://github.com/nvim-flutter/flutter-tools.nvim",
 })
 
 require("tabout").setup()
@@ -90,4 +93,19 @@ require("mini.jump2d").setup({
     mappings = {
         start_jumping = '',
     },
+})
+
+--- Flutter ---
+require('flutter-tools').setup({
+  ui = {
+    border = "rounded",
+  },
+  decorations = {
+    statusline = {
+      app_version = true,
+      device = true,
+    }
+  },
+  -- Enables the vertical lines that help track deep widget trees
+  widget_guides = { enabled = true }
 })
