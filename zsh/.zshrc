@@ -12,7 +12,6 @@ export PATH=$PATH:$HOME/.cargo/bin
 
 alias v="nvim"
 alias lg="lazygit"
-alias sshcon="ssh zanebennion@192.168.86.48"
 alias sshtail="ssh zanebennion@100.106.95.106"
 alias zel="zellij"
 
