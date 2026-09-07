@@ -26,3 +26,8 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/zane/.local/bin:$PATH"
+export PATH="/Users/zane/.local/bin:$PATH"
