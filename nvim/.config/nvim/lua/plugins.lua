@@ -95,6 +95,9 @@ require("mini.jump2d").setup({
     },
 })
 
+--- mini diff ---
+require("mini.diff").setup()
+
 --- Flutter ---
 require('flutter-tools').setup({
   ui = {
